@@ -13,12 +13,11 @@ html,body{min-height:100vh;background:var(--bg);font-family:'Montserrat',sans-se
 .card{width:100%;max-width:400px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,0.5)}
 /* HEADER */
 .header{background:var(--dark);padding:28px 24px 24px;text-align:center;border-bottom:1px solid var(--border)}
-.logo-wrap{display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.logo-mark{display:block;height:64px;width:auto;max-width:100%;flex-shrink:0}
-.avatar{width:72px;height:72px;border-radius:50%;background:var(--surface);border:2px solid rgba(255,255,255,0.25);margin:0 auto 10px;overflow:hidden;flex-shrink:0}
+.avatar{width:92px;height:92px;border-radius:50%;background:var(--surface);border:2px solid rgba(255,255,255,0.25);margin:0 auto 12px;overflow:hidden;flex-shrink:0}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .name{font-size:19px;font-weight:700;margin-bottom:4px}
-.role{font-size:11px;font-weight:500;color:var(--muted);line-height:1.5}
+.role{font-size:11px;font-weight:500;color:var(--muted);line-height:1.5;margin-bottom:6px}
+.brand-line{font-size:10px;font-weight:800;letter-spacing:.55px;text-transform:uppercase;line-height:1.3;color:#fff;white-space:nowrap}
 /* BODY */
 .body{background:var(--bg);padding:22px 20px 24px}
 .cta-group{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
@@ -55,14 +54,12 @@ html,body{min-height:100vh;background:var(--bg);font-family:'Montserrat',sans-se
 <div class="card">
 
   <div class="header">
-    <div class="logo-wrap">
-      <img class="logo-mark" src="assets/logo-branco.svg" alt="Soluções Inteligentes" width="68" height="64" decoding="async">
-    </div>
     <div class="avatar">
-      <img src="assets/avatar-felipe.png" alt="Felipe Oliveira" width="72" height="72" decoding="async">
+      <img src="assets/avatar-felipe.png" alt="Felipe Oliveira" width="92" height="92" decoding="async">
     </div>
     <div class="name">Felipe Oliveira</div>
-    <div class="role">Especialista em TI<br>Rio de Janeiro</div>
+    <div class="role">Especialista em TI</div>
+    <div class="brand-line">Soluções Inteligentes</div>
   </div>
 
   <div class="body">
@@ -138,7 +135,7 @@ new QRCode(document.getElementById("qrcode"),{
   correctLevel:QRCode.CorrectLevel.H
 });
 function shareCard(){
-  const d={title:'Felipe Oliveira — Soluções Inteligentes',text:'Especialista em TI — Rio de Janeiro.',url:'https://sitecnologia.tec.br'};
+  const d={title:'Felipe Oliveira — Soluções Inteligentes',text:'Especialista em TI.',url:'https://sitecnologia.tec.br'};
   if(navigator.share){navigator.share(d);}
   else{navigator.clipboard.writeText(d.url).then(()=>alert('Link copiado: '+d.url));}
 }
