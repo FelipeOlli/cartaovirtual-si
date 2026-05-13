@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe Oliveira — Soluções Inteligentes</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#1B2F6E;--dark:#142358;--surface:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.12);--text:#fff;--muted:rgba(255,255,255,0.6);--green:#25D366;--radius:20px;--rsm:12px}
+html,body{min-height:100vh;background:var(--bg);font-family:'Montserrat',sans-serif;color:var(--text);display:flex;align-items:center;justify-content:center;padding:20px}
+.card{width:100%;max-width:400px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+/* HEADER */
+.header{background:var(--dark);padding:28px 24px 24px;text-align:center;border-bottom:1px solid var(--border)}
+.logo-wrap{display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.logo-mark{display:block;height:64px;width:auto;max-width:100%;flex-shrink:0}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--surface);border:2px solid rgba(255,255,255,0.25);margin:0 auto 10px;overflow:hidden;flex-shrink:0}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.name{font-size:19px;font-weight:700;margin-bottom:4px}
+.role{font-size:11px;font-weight:500;color:var(--muted);line-height:1.5}
+/* BODY */
+.body{background:var(--bg);padding:22px 20px 24px}
+.cta-group{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 16px;border-radius:var(--rsm);font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;text-decoration:none;border:none;cursor:pointer;transition:all 150ms ease}
+.btn-wa{background:var(--green);color:#fff}
+.btn-site{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.25)}
+.btn:active{transform:scale(0.97)}
+.divider{height:1px;background:var(--border);margin:0 0 16px}
+.label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,0.4);margin-bottom:10px}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:20px}
+.svc{background:var(--surface);border:1px solid var(--border);border-radius:var(--rsm);padding:10px 12px;display:flex;align-items:center;gap:8px}
+.svc-icon{font-size:16px;flex-shrink:0}
+.svc-name{font-size:11px;font-weight:600;color:#fff;line-height:1.3}
+.contacts{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.ci{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:500;color:var(--muted)}
+.ci a{color:inherit;text-decoration:none;font:inherit}
+.ci-icon{width:26px;height:26px;border-radius:7px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+/* QR */
+.qr-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--rsm);padding:16px;display:flex;align-items:center;gap:14px}
+.qr-box{background:#fff;border-radius:7px;padding:6px;flex-shrink:0;width:92px;height:92px;display:flex;align-items:center;justify-content:center}
+.qr-box canvas,.qr-box img{width:80px!important;height:80px!important}
+.qr-title{font-size:12px;font-weight:700;color:#fff;margin-bottom:3px}
+.qr-desc{font-size:10.5px;font-weight:500;color:var(--muted);line-height:1.5}
+.qr-num{font-size:12px;font-weight:700;color:var(--green);margin-top:5px}
+.qr-num a{color:inherit;text-decoration:none;font:inherit}
+/* FOOTER */
+.footer{background:var(--dark);border-top:1px solid var(--border);padding:13px 20px;display:flex;align-items:center;justify-content:space-between}
+.footer p{font-size:11px;font-weight:600;color:var(--muted)}
+.footer strong{color:rgba(255,255,255,0.8)}
+.share-btn{display:inline-flex;align-items:center;gap:5px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;color:var(--muted);background:none;border:1px solid var(--border);border-radius:20px;padding:5px 12px;cursor:pointer;transition:all 150ms ease}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="header">
+    <div class="logo-wrap">
+      <img class="logo-mark" src="assets/logo-branco.svg" alt="Soluções Inteligentes" width="68" height="64" decoding="async">
+    </div>
+    <div class="avatar">
+      <img src="assets/avatar-felipe.png" alt="Felipe Oliveira" width="72" height="72" decoding="async">
+    </div>
+    <div class="name">Felipe Oliveira</div>
+    <div class="role">Especialista em TI<br>Rio de Janeiro</div>
+  </div>
+
+  <div class="body">
+
+    <div class="cta-group">
+      <a class="btn btn-wa" href="https://wa.me/5521965318993" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.486 2 2.001 6.485 2.001 12c0 1.918.52 3.715 1.428 5.26L2 22l4.868-1.395C8.271 21.471 10.09 22 12.001 22c5.515 0 10-4.485 10-10S17.516 2 12.001 2zm0 18c-1.739 0-3.363-.516-4.72-1.4l-.34-.202-3.494 1.001.975-3.561-.22-.351A7.945 7.945 0 014 12c0-4.411 3.589-8 8.001-8C16.411 4 20 7.589 20 12s-3.589 8-7.999 8z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a class="btn btn-site" href="https://sitecnologia.tec.br" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        sitecnologia.tec.br
+      </a>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label">Serviços</div>
+    <div class="services">
+      <div class="svc"><span class="svc-icon">📷</span><span class="svc-name">Câmeras CFTV</span></div>
+      <div class="svc"><span class="svc-icon">💻</span><span class="svc-name">Manutenção Notebooks</span></div>
+      <div class="svc"><span class="svc-icon">📶</span><span class="svc-name">Redes Wi-Fi</span></div>
+      <div class="svc"><span class="svc-icon">🚪</span><span class="svc-name">Porteiro Eletrônico</span></div>
+      <div class="svc"><span class="svc-icon">🖥️</span><span class="svc-name">Suporte Técnico</span></div>
+      <div class="svc"><span class="svc-icon">📽️</span><span class="svc-name">Sala de Projeção</span></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label">Contato</div>
+    <div class="contacts">
+      <div class="ci">
+        <div class="ci-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
+        <a href="tel:+5521965318993">(21) 96531-8993</a>
+      </div>
+      <div class="ci">
+        <div class="ci-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        <a href="https://www.instagram.com/solucoesinteligentes_si/" target="_blank" rel="noopener noreferrer">@solucoesinteligentes_si</a>
+      </div>
+      <div class="ci">
+        <div class="ci-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
+        <a href="mailto:contato@sitecnologia.tec.br">contato@sitecnologia.tec.br</a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label">Escaneie e fale comigo</div>
+    <div class="qr-wrap">
+      <div class="qr-box" id="qrcode"></div>
+      <div>
+        <div class="qr-title">Abre direto no WhatsApp</div>
+        <div class="qr-desc">Aponte a câmera do celular para iniciar a conversa agora.</div>
+        <div class="qr-num"><a href="tel:+5521965318993">+55 (21) 96531-8993</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>Orçamento <strong>rápido e sem compromisso</strong></p>
+    <button class="share-btn" onclick="shareCard()">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Compartilhar
+    </button>
+  </div>
+
+</div>
+
+<script>
+new QRCode(document.getElementById("qrcode"),{
+  text:"https://wa.me/5521965318993",
+  width:80,height:80,
+  colorDark:"#1B2F6E",
+  colorLight:"#ffffff",
+  correctLevel:QRCode.CorrectLevel.H
+});
+function shareCard(){
+  const d={title:'Felipe Oliveira — Soluções Inteligentes',text:'Especialista em TI — Rio de Janeiro.',url:'https://sitecnologia.tec.br'};
+  if(navigator.share){navigator.share(d);}
+  else{navigator.clipboard.writeText(d.url).then(()=>alert('Link copiado: '+d.url));}
+}
+</script>
+</body>
+</html>

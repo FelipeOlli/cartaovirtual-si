@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      # Opcional: montar dados persistentes (hoje o site é 100% estático)
+      - cartao-data:/app/data
+
+volumes:
+  cartao-data:
