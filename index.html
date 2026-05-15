@@ -135,9 +135,19 @@ new QRCode(document.getElementById("qrcode"),{
   correctLevel:QRCode.CorrectLevel.H
 });
 function shareCard(){
-  const d={title:'Felipe Oliveira — Soluções Inteligentes',text:'Especialista em TI.',url:'https://sitecnologia.tec.br'};
-  if(navigator.share){navigator.share(d);}
-  else{navigator.clipboard.writeText(d.url).then(()=>alert('Link copiado: '+d.url));}
+  const url='https://cartao.sitecnologia.tec.br';
+  const text='Conheci a Soluções Inteligentes.\nTecnologia e suporte para quem quer resolver sem dor de cabeça.';
+  const message=text+'\n\n'+url;
+  const payload={title:'Felipe Oliveira — Soluções Inteligentes',text:text,url:url};
+  if(navigator.share){
+    navigator.share(payload).catch(function(){});
+  }else if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+    location.href='https://wa.me/?text='+encodeURIComponent(message);
+  }else{
+    navigator.clipboard.writeText(message).then(function(){
+      alert('Mensagem copiada! Cole no WhatsApp e envie para seu contato.');
+    });
+  }
 }
 </script>
 </body>
