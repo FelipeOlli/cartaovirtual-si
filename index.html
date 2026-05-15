@@ -136,12 +136,9 @@ new QRCode(document.getElementById("qrcode"),{
   correctLevel:QRCode.CorrectLevel.H
 });
 function shareCard(){
-  const url='https://cartao.sitecnologia.tec.br';
-  const text='Conheci a Soluções Inteligentes.\nTecnologia e suporte para quem quer resolver sem dor de cabeça.';
-  const message=text+'\n\n'+url;
-  const payload={title:'Felipe Oliveira — Soluções Inteligentes',text:text,url:url};
+  const message='Conheci a Soluções Inteligentes.\nTecnologia e suporte para quem quer resolver sem dor de cabeça.\n\nhttps://cartao.sitecnologia.tec.br';
   if(navigator.share){
-    navigator.share(payload).catch(function(){});
+    navigator.share({title:'Soluções Inteligentes',text:message}).catch(function(){});
   }else if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
     location.href='https://wa.me/?text='+encodeURIComponent(message);
   }else{
